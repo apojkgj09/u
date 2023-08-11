@@ -8,7 +8,7 @@
 # All rights reserved.
 #
 
-from ArchMusic.core.bot import ArchMusicBot
+from ArchMusic.core.bot import ArchMusic
 from ArchMusic.core.dir import dirr
 from ArchMusic.core.git import git
 from ArchMusic.core.userbot import Userbot
@@ -32,7 +32,7 @@ heroku()
 sudo()
 
 # Bot Client
-app = ArchMusicBot()
+app = ArchMusic()
 
 # Assistant Client
 userbot = Userbot()
