@@ -68,9 +68,13 @@ class ArchMusic(Client):
                 )
                 sys.exit()
 
-            if get_me.last_name:
-                self.name = get_me.first_name + " " + get_me.last_name
-            else:
-                self.name = get_me.first_name
+        except Exception as e:
+            LOGGER(__name__).error(f"Error during bot start: {e}")
+            sys.exit()
 
-            LOGGER(__name__).info(f"MusicBot Started as {self.name}")
+        if get_me.last_name:
+            self.name = get_me.first_name + " " + get_me.last_name
+        else:
+            self.name = get_me.first_name
+
+        LOGGER(__name__).info(f"MusicBot Started as {self.name}")
