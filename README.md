@@ -58,7 +58,7 @@ Press Ctrl + C  once you are done with editing vars and type :wq to save .env or
 
 9. Finally Run Your Music Bot:
 
-`python3 -m YukkiMusic`
+`python3 -m ArchMusic`
 
 thank you❤️ [Zoney](https://t.me/itszoney)
 
