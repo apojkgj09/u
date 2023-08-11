@@ -1,13 +1,3 @@
-#
-# Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
-#
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
-
 import sys
 
 from pyrogram import Client
@@ -34,20 +24,17 @@ class ArchMusic(Client):
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
-            try:
-        video_file_path = "assets/arch.mp4"  # Replace with the actual file path
-        caption = "Bot Started"
-        await self.send_video(
-            config.LOG_GROUP_ID,
-            video=video_file_path,
-            caption=caption
-        )
-    except:
-        LOGGER(__name__).error(
-            "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
-        )
-        sys.exit()
-
+        video_url = "https://telegra.ph/file/36221d40afde82941ffff.mp4"
+        try:
+            await self.send_message(
+                config.LOG_GROUP_ID,
+                text=f"Bot Started"
+            )
+        except:
+            LOGGER(__name__).error(
+                "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
+            )
+            sys.exit()
 
         if config.SET_CMDS == str(True):
             try:
@@ -82,3 +69,4 @@ class ArchMusic(Client):
             self.name = get_me.first_name
 
         LOGGER(__name__).info(f"MusicBot Started as {self.name}")
+
