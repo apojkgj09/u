@@ -30,20 +30,23 @@ class ArchMusic(Client):
         )
 
     async def start(self):
-        await super().start()
-        get_me = await self.get_me()
-        self.username = get_me.username
-        self.id = get_me.id
-        try:
-            await self.send_message(
-                config.LOG_GROUP_ID, "Bot Started"
-            )
-        except:
-            LOGGER(__name__).error(
-                "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
-            )
-            sys.exit()
-        if config.SET_CMDS == str(True):
+    await super().start()
+    get_me = await self.get_me()
+    self.username = get_me.username
+    self.id = get_me.id
+    try:
+        video_url = "https://telegra.ph/file/36221d40afde82941ffff.mp4"  # Replace with your video URL
+        caption = "Bot Started"
+        await self.send_message(
+            config.LOG_GROUP_ID,
+            text=f"{caption}\n\n{video_url}"
+        )
+    except:
+        LOGGER(__name__).error(
+            "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
+        )
+        sys.exit()
+    if config.SET_CMDS == str(True):
             try:
                 await self.set_bot_commands(
                     [
