@@ -70,7 +70,7 @@ DEVOLOPER ❤️ [Zoney](https://t.me/itszoney)
 
 # 🏷 Support
 
-- Contact options listed on [this GitHub profile](https://github.com/sakil000)
+- Contact options listed on [this GitHub profile](https://github.com/ArchBots)
 - [Telegram Channel](https://t.me/ArchBots)
 
 
