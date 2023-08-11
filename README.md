@@ -1,6 +1,6 @@
 <img src="https://telegra.ph/file/94e013900d86ff5899439.jpg" align="right" width="200" height="200"/>
 
-# Arohi Music Bot <img src="https://img.shields.io/github/v/release/sakil000/ArohiMusicBot?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
+# Arch Music Bot <img src="https://img.shields.io/github/v/release/sakil000/ArohiMusicBot?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
 
 [Arohi Music Bot](https://t.me/UMIKO_CHAT_BOT) is a Powerful Telegram Music+Video Bot written in Python using Pyrogram and Py-Tgcalls by which you can stream songs, video and even live streams in your group calls via various sources.
 
