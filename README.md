@@ -71,7 +71,8 @@ DEVOLOPER ❤️ [Zoney](https://t.me/itszoney)
 # 🏷 Support
 
 - Contact options listed on [this GitHub profile](https://github.com/ArchBots)
-- [Telegram Channel](https://t.me/ArchBots)
+- [Our Channel](https://t.me/ArchBots)
+- [Support Group](https://t.me/ARCH_SUPPORTS)
 
 
 
