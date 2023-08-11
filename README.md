@@ -60,9 +60,11 @@ Press Ctrl + C  once you are done with editing vars and type :wq to save .env or
 
 `python3 -m ArchMusic`
 
-DEVOLOPER ❤️ [Zoney](https://t.me/itszoney)
+
 
 MADE BY ❤️ [SAKIL](https://t.me/YO_UR_OFFICIAL_CRUSH)
+
+DEVOLOPER ❤️ [Zoney](https://t.me/itszoney)
 
  DEVOLOPER ❤️ [Rudra](https://t.me/Unknown_hu_m)
 
