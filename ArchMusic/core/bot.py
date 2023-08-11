@@ -21,16 +21,20 @@ class ArchMusic(Client):
 
     async def start(self):
         await super().start()
-        get_me = await self.get_me()
-        self.username = get_me.username
-        self.id = get_me.id
-        video_url = "https://telegra.ph/file/36221d40afde82941ffff.mp4"
-        try:
-            await self.send_message(
-                 config.LOG_GROUP_ID,
-                 text=f"Bot Started",              
-                 video=video_url
-            )
+            get_me = await self.get_me()
+            self.username = get_me.username
+            self.id = get_me.id
+
+            video_url = "https://telegra.ph/file/36221d40afde82941ffff.mp4"
+            try:
+                await self.send_message(
+                    config.LOG_GROUP_ID,
+                    text="Bot Started",
+                )
+                await self.send_video(
+                    config.LOG_GROUP_ID,
+                    video=video_url,
+                )
         except:
             LOGGER(__name__).error(
                 "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
