@@ -8,7 +8,6 @@ import config
 
 from ..logging import LOGGER
 
-
 class ArchMusic(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
@@ -21,6 +20,7 @@ class ArchMusic(Client):
 
     async def start(self):
         await super().start()
+        try:  # Corrected indentation here
             get_me = await self.get_me()
             self.username = get_me.username
             self.id = get_me.id
@@ -35,11 +35,11 @@ class ArchMusic(Client):
                     config.LOG_GROUP_ID,
                     video=video_url,
                 )
-        except:
-            LOGGER(__name__).error(
-                "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
-            )
-            sys.exit()
+            except:
+                LOGGER(__name__).error(
+                    "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
+                )
+                sys.exit()
 
         if config.SET_CMDS == str(True):
             try:
