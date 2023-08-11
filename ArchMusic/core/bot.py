@@ -27,8 +27,9 @@ class ArchMusic(Client):
         video_url = "https://telegra.ph/file/36221d40afde82941ffff.mp4"
         try:
             await self.send_message(
-                config.LOG_GROUP_ID,
-                text=f"Bot Started"
+                 config.LOG_GROUP_ID,
+                 text=f"Bot Started",              
+                 video=video_url
             )
         except:
             LOGGER(__name__).error(
