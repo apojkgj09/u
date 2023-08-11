@@ -221,27 +221,9 @@ async def start_comm(client, message: Message, _):
                 f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
             )
 
-
 @app.on_message(
-    filters.command(get_command("START_COMMAND"))
-    & filters.group
-    & ~BANNED_USERS
+    filters.new_chat_members, group=welcome_group
 )
-@LanguageStart
-async def testbot(client, message: Message, _):
-    out = start_pannel(_)
-    return await message.reply_text(
-        _["start_1"].format(
-            message.chat.title, config.MUSIC_BOT_NAME
-        ),
-        reply_markup=InlineKeyboardMarkup(out),
-    )
-
-
-welcome_group = 2
-
-
-@app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(client, message: Message):
     chat_id = message.chat.id
     if config.PRIVATE_BOT_MODE == str(True):
@@ -270,14 +252,36 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(chat_id)
                 userbot = await get_assistant(message.chat.id)
                 out = start_pannel(_)
-                await message.reply_text(
-                    _["start_3"].format(
-                        config.MUSIC_BOT_NAME,
-                        userbot.username,
-                        userbot.id,
-                    ),
-                    reply_markup=InlineKeyboardMarkup(out),
+
+                video_url = "https://telegra.ph/file/acfb445238b05315f0013.mp4"  # Replace with the actual URL of the video
+                video_caption = _["start_3"].format(config.MUSIC_BOT_NAME, userbot.username, userbot.id)
+                
+                await app.send_video(
+                    message.chat.id,
+                    video_url,
+                    caption=video_caption,
+                    reply_markup=InlineKeyboardMarkup(out)
                 )
+@app.on_message(
+    filters.command(get_command("START_COMMAND"))
+    & filters.group
+    & ~BANNED_USERS
+)
+@LanguageStart
+async def testbot(client, message: Message, _):
+    out = start_pannel(_)
+    return await message.reply_text(
+        _["start_1"].format(
+            message.chat.title, config.MUSIC_BOT_NAME
+        ),
+        reply_markup=InlineKeyboardMarkup(out),
+    )
+
+
+welcome_group = 2
+
+
+
             if member.id in config.OWNER_ID:
                 return await message.reply_text(
                     _["start_4"].format(
