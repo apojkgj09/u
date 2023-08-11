@@ -1,4 +1,4 @@
-<img src="https://telegra.ph/file/94e013900d86ff5899439.jpg" align="right" width="200" height="200"/>
+<img src="https://telegra.ph/file/94e013900d86ff5899439.jpg" align="middle" width="200" height="200"/>
 
 # Arch Music Bot <img src="https://img.shields.io/github/v/release/sakil000/ArohiMusicBot?color=black&logo=github&logoColor=black&style=social" alt="RELEASE">
 
