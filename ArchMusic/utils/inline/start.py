@@ -33,7 +33,7 @@ def start_pannel(_):
             ),
         ],
     ]
-if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    if SUPPORT_CHANNEL and SUPPORT_GROUP:
         buttons.append(
             [
                 InlineKeyboardButton(
@@ -62,6 +62,7 @@ if SUPPORT_CHANNEL and SUPPORT_GROUP:
                 ]
             )
     return buttons
+
 
 
 def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
