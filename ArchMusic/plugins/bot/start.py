@@ -286,8 +286,7 @@ async def testbot(client, message: Message, _):
 
 welcome_group = 2
 
-
-
+# The following lines have indentation errors
 if member.id in config.OWNER_ID:
     return await message.reply_text(
         _["start_4"].format(
@@ -302,5 +301,5 @@ if member.id in SUDOERS:
     )
 return
 
-        except:
-            return
+except:
+    return
