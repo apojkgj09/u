@@ -221,6 +221,10 @@ async def start_comm(client, message: Message, _):
                 f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
             )
 
+
+welcome_group = 2
+
+
 @app.on_message(
     filters.new_chat_members, group=welcome_group
 )
@@ -262,44 +266,18 @@ async def welcome(client, message: Message):
                     caption=video_caption,
                     reply_markup=InlineKeyboardMarkup(out)
                 )
-        except:
-            return
-
-@app.on_message(
-    filters.command(get_command("START_COMMAND"))
-    & filters.group
-    & ~BANNED_USERS
-)
-@LanguageStart
-async def testbot(client, message: Message, _):
-    out = start_pannel(_)
-    try:
-        return await message.reply_text(
-            _["start_1"].format(
-                message.chat.title, config.MUSIC_BOT_NAME
-            ),
-            reply_markup=InlineKeyboardMarkup(out),
-        )
-    except:
-        return
-
-
-welcome_group = 2
-
-# The following lines have indentation errors
-if member.id in config.OWNER_ID:
-    return await message.reply_text(
-        _["start_4"].format(
-            config.MUSIC_BOT_NAME, member.mention
-        )
-    )
-if member.id in SUDOERS:
-    return await message.reply_text(
-        _["start_5"].format(
-            config.MUSIC_BOT_NAME, member.mention
-        )
-    )
-return
-
-except:
-    return
+           if member.id in config.OWNER_ID:
+                  return await message.reply_text(
+                      _["start_4"].format(
+                          config.MUSIC_BOT_NAME, member.mention
+                       )
+                  )
+              if member.id in SUDOERS:
+                  return await message.reply_text(
+                      _["start_5"].format(
+                          config.MUSIC_BOT_NAME, member.mention
+                      )
+                  )
+              return
+          except:
+              return
