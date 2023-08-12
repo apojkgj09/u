@@ -18,4 +18,5 @@ WORKDIR /app/
 RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 
 # Set the command to start your application
-CMD bash start
+CMD python3 -m ArchMusic
+
