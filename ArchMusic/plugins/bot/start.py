@@ -264,6 +264,7 @@ async def welcome(client, message: Message):
                 )
         except:
             return
+
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.group
@@ -272,12 +273,15 @@ async def welcome(client, message: Message):
 @LanguageStart
 async def testbot(client, message: Message, _):
     out = start_pannel(_)
-    return await message.reply_text(
-        _["start_1"].format(
-            message.chat.title, config.MUSIC_BOT_NAME
-        ),
-        reply_markup=InlineKeyboardMarkup(out),
-    )
+    try:
+        return await message.reply_text(
+            _["start_1"].format(
+                message.chat.title, config.MUSIC_BOT_NAME
+            ),
+            reply_markup=InlineKeyboardMarkup(out),
+        )
+    except:
+        return
 
 
 welcome_group = 2
