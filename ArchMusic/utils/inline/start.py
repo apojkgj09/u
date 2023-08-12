@@ -26,12 +26,6 @@ def start_pannel(_):
                 text=_["S_B_2"], callback_data="settings_helper"
             ),
         ],
-        [
-            InlineKeyboardButton( 
-                text="Repo",
-                url=f"https://github.com/ArchBots/ArchMusic",
-            ),
-        ],
     ]
     if SUPPORT_CHANNEL and SUPPORT_GROUP:
         buttons.append(
@@ -62,7 +56,6 @@ def start_pannel(_):
                 ]
             )
     return buttons
-
 
 
 def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
