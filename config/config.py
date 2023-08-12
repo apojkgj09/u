@@ -12,9 +12,9 @@ load_dotenv()
 
 # Get it from my.telegram.org
 
-API_ID = int(getenv("API_ID", "29525951"))
+API_ID = int(getenv("API_ID", "29392888"))
 
-API_HASH = getenv("API_HASH", "39457e1fa92df1ce360fb10c13058d34")
+API_HASH = getenv("API_HASH", "552b53d2c5b39cf1d9267ccd17464015")
 
 ## Get it from @Botfather in Telegram.
 
@@ -136,7 +136,7 @@ TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 # Your Github Repo.. Will be shown on /start Command
 
-GITHUB_REPO = getenv("GITHUB_REPO", None)
+GITHUB_REPO = getenv("GITHUB_REPO", " https://github.com/Archbots/ArchMusic")
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
 
