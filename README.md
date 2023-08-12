@@ -58,16 +58,24 @@ Press Ctrl + C  once you are done with editing vars and type :wq to save .env or
 
 9. Finally Run Your Music Bot:
 
-`python3 -m YukkiMusic`
-
-thank you❤️ [Zoney](https://t.me/itszoney)
+`python3 -m ArchMusic`
 
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?color=F555247&width=890&lines=𝗕𝗢𝗧+𝗜𝗦+𝗖𝗥𝗘𝗔𝗧𝗘𝗗+𝗙𝗢𝗥+𝗙𝗥𝗜𝗘𝗡𝗗+𝗪𝗜𝗧𝗛+𝗟𝗢𝗩𝗘+𝗔𝗡𝗗+𝗛𝗔𝗥𝗗𝗪𝗢𝗥𝗞+𝗕𝗬+𝗔𝗥𝗖𝗛𝗕𝗢𝗧𝗦%E2%9C%8C">
+</p> 
+
+MADE BY ❤️ [SAKIL](https://t.me/YO_UR_OFFICIAL_CRUSH)
+
+DEVOLOPER ❤️ [Zoney](https://t.me/itszoney)
+
+ DEVOLOPER ❤️ [Rudra](https://t.me/Unknown_hu_m)
 
 # 🏷 Support
 
-- Contact options listed on [this GitHub profile](https://github.com/sakil000)
-- [Telegram Channel](https://t.me/ArchBots)
+- Contact options listed on [this GitHub profile](https://github.com/ArchBots)
+- [Our Channel](https://t.me/ArchBots)
+- [Support Group](https://t.me/ARCH_SUPPORTS)
 
 
 
