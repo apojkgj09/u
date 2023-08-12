@@ -284,18 +284,19 @@ welcome_group = 2
 
 
 
-            if member.id in config.OWNER_ID:
-                return await message.reply_text(
-                    _["start_4"].format(
-                        config.MUSIC_BOT_NAME, member.mention
-                    )
-                )
-            if member.id in SUDOERS:
-                return await message.reply_text(
-                    _["start_5"].format(
-                        config.MUSIC_BOT_NAME, member.mention
-                    )
-                )
-            return
+if member.id in config.OWNER_ID:
+    return await message.reply_text(
+        _["start_4"].format(
+            config.MUSIC_BOT_NAME, member.mention
+        )
+    )
+if member.id in SUDOERS:
+    return await message.reply_text(
+        _["start_5"].format(
+            config.MUSIC_BOT_NAME, member.mention
+        )
+    )
+return
+
         except:
             return
