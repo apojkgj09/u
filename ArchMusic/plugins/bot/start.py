@@ -224,7 +224,6 @@ async def start_comm(client, message: Message, _):
 
 welcome_group = 2
 
-
 @app.on_message(
     filters.new_chat_members, group=welcome_group
 )
@@ -266,18 +265,18 @@ async def welcome(client, message: Message):
                     caption=video_caption,
                     reply_markup=InlineKeyboardMarkup(out)
                 )
-           if member.id in config.OWNER_ID:
-                  return await message.reply_text(
-                      _["start_4"].format(
-                          config.MUSIC_BOT_NAME, member.mention
-                       )
-                  )
-              if member.id in SUDOERS:
-                  return await message.reply_text(
-                      _["start_5"].format(
-                          config.MUSIC_BOT_NAME, member.mention
-                      )
-                  )
-              return
-          except:
-              return
+            if member.id in config.OWNER_ID:
+                return await message.reply_text(
+                    _["start_4"].format(
+                        config.MUSIC_BOT_NAME, member.mention
+                    )
+                )
+            if member.id in SUDOERS:
+                return await message.reply_text(
+                    _["start_5"].format(
+                        config.MUSIC_BOT_NAME, member.mention
+                    )
+                )
+            return
+        except:
+            return
