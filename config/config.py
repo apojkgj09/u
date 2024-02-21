@@ -18,11 +18,11 @@ API_HASH = getenv("API_HASH", "552b53d2c5b39cf1d9267ccd17464015")
 
 ## Get it from @Botfather in Telegram.
 
-BOT_TOKEN = getenv("BOT_TOKEN", "6587382757:AAE8kfK2fFfR1ATX9noyl06jJt_COGq6en4")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 # Database to save your chats and stats.
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Inaya:Inaya@inaya.wbxxiws.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", )
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 
@@ -42,7 +42,7 @@ SONG_DOWNLOAD_DURATION = int(
 
 # You'll need a Private Group ID for this.
 
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001687657146")) 
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001671717166")) 
 
 # A name for your Music bot.
 
@@ -52,7 +52,7 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME","ArchMusic")
 
 OWNER_ID = list(
 
-    map(int, getenv("OWNER_ID", "5218610039").split())
+    map(int, getenv("OWNER_ID", "5697313662").split())
 
 )  # Input type must be interger
 
@@ -70,7 +70,7 @@ UPSTREAM_REPO = getenv(
 
     "UPSTREAM_REPO",
 
-    "https://github.com/ArchBots/ArchMusic",
+    "https://github.com/apojkgj09/u",
 
 )
 
@@ -96,13 +96,13 @@ SUPPORT_GROUP = getenv(
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "true")
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
 
 # Time after which you're assistant account will leave chats automatically.
 
 AUTO_LEAVE_ASSISTANT_TIME = int(
 
-    getenv("ASSISTANT_LEAVE_TIME", "50")
+    getenv("ASSISTANT_LEAVE_TIME", "500")
 
 )  # Remember to give value in Seconds
 
